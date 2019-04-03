@@ -1,0 +1,94 @@
+/* -------------------------------------------------------------------------- */
+/* General */
+.bkgrnd {
+  background-color: #F9F3E8; /* off-white */
+}
+
+#backtotop {}
+/* -------------------------------------------------------------------------- */
+/* TopNav */
+.nav-wrapper {
+  background-color: #E58859;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.brand-logo {
+  white-space: nowrap;
+}
+/* navbar links */
+.nav-wrapper a {
+  color: #FFFFFF;
+  display: block;
+  text-align: center;
+  text-decoration:none;
+}
+.nav-wrapper a:hover {
+  background-color: #506380;
+  color: white;
+  text-decoration: none;
+}
+.nav-wrapper a:active{
+  background-color: #506380;
+}
+/* -------------------------------------------------------------------------- */
+/* SideNav */
+.sidenav {
+  text-decoration: none;
+}
+/* sidenav links */
+.sidenav a {
+  display: block;
+  text-decoration:none;
+}
+.sidenav a:hover {
+  background-color: #506380;
+  text-decoration: none;
+}
+.sidenav a:active{
+  background-color: red;
+}
+/* -------------------------------------------------------------------------- */
+/* linkedin and email button */
+a .fab, .far, .ai {
+  color: black;
+}
+/* Add a hover effect */
+.fa:hover, .fab:hover, .ai:hover, .far:hover{
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.fa-envelope-square, .fa:active .fa:visited {
+background:;
+color:;
+text-decoration: none;
+}
+/* -------------------------------------------------------------------------- */
+/* footer */
+.page-footer {
+  background-color: #E58859;
+}
+
+#myFooter {
+  background-color: #E58859;
+}
+
+/* footer links */
+.page-footer a {
+}
+
+.footer-copyright {
+  background-color: #E58859;
+}
+
+/* sticky footer */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
+/* -------------------------------------------------------------------------- */

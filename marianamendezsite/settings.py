@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'marianamendezsiteapp',
 ]
 
 MIDDLEWARE = [
@@ -118,3 +119,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+LOGIN_REDIRECT_URL = '/' #redirect user to homepage after login
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #set media root - all images I upload into server go to media folder
+MEDIA_URL = '/media/'
+
+# updates our database to the required by Heroku when we upload our app
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
