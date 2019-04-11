@@ -31,6 +31,16 @@
 .nav-wrapper a:active{
   background-color: #506380;
 }
+
+.dropdown-content {
+  top: 100% !important;
+}
+
+.foodright {
+  padding-left: 32px !important;
+  background-color: #E58859;
+}
+
 /* -------------------------------------------------------------------------- */
 /* SideNav */
 .sidenav {
