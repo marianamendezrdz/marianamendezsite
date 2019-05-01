@@ -11,13 +11,13 @@ Mariana Mendez | Food Blog
 <meta property="og:image" content="https://s3-us-west-1.amazonaws.com/marianamendezsite/home_page_pic.jpg"/>
 <meta property="og:type" content="website" />
 
-<h3 class="center"> {{post.title}}</h3>
-
-<ul class="collection">
-  <!-- create a loop to loop through our posts -->
-  {% for posts in posts %}
-    <li class="collection-item"><a href="/posts/details/{{post.id}}">{{post.title}}</a></li>
-  {% endfor %}
-</ul>
-
+<h3 class="center">{{title}}</h3>
+  <div class="container">
+    <ul class="collection">
+      <!-- create a loop to loop through our posts -->
+      {% for post in posts %}
+        <li class="collection-item"><a href="/posts/details/{{post.id}}">{{post.title}}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
 {% endblock %}
