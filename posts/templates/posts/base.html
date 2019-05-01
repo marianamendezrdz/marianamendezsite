@@ -1,0 +1,160 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Mariana Mendez Rodriguez • Mexican • Nutritionist • Certified Community Health Worker & Youth Advocate Specialist">
+
+  <title>{% block title %}{% endblock %}</title>
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import bootstrap.css-->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}"  media="screen,projection"/>
+
+  <!--Import "custom style"-->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- allows us to use our custom style on type of bootstrap -->
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Add icon library (social media buttons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+</head>
+<body class="bkgrnd">
+
+  <!-- NavBar -->
+<header>
+<div class="navbar-fixed">
+  <!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="{% url 'blog' %}">Food Blog (English)</a></li>
+  <li class="divider"></li>
+  <li><a href="{% url 'blog' %}">Food Blog (Español)</a></li>
+</ul>
+  <nav>
+    <div class="nav-wrapper">
+      <!-- <p class="brand-logo" id="backtotop"><img class="img-responsive" src='' width=50 alt="logo"></p> -->
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li> <a href="{% url 'home' %}">Home</a></li>
+        <li> <a href="{% url 'home' %}">About Me</a></li>
+        <li> <a target="_blank" href="https://s3-us-west-1.amazonaws.com/marianamendezsite/mariana_resume.pdf">Resume</a></li>
+        <!-- Dropdown Trigger -->
+          <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Food Blog<i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+  <!-- NavBar -->
+
+  <!-- SideNav -->
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li> <a href="{% url 'home' %}">About Me</a></li>
+      <li class="no-padding">
+       <ul class="collapsible collapsible-accordion">
+         <li>
+           <a class="collapsible-header foodright">Food Blog<i class="material-icons right">arrow_drop_down</i></a>
+           <div class="collapsible-body">
+             <ul>
+               <li class="divider"></li>
+               <li><a class="grey lighten-4" href="{% url 'blog' %}">English</a></li>
+               <li><a class="grey lighten-4" href="{% url 'blog' %}">Español</a></li>
+             </ul>
+           </div>
+         </li>
+       </ul>
+     </li>
+      <li><a target="_blank" href="https://s3-us-west-1.amazonaws.com/marianamendezsite/mariana_resume.pdf">Resume</a></li>
+    </ul>
+  <!-- SideNav -->
+
+  <div class="container main" id="backtotop"> <!-- puts body contents within 70% of window width -->
+
+    <div class="row valign-wrapper">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 center">
+        <h3 class="name flow-text"> <strong>Mariana Mendez Rodriguez</strong></h3>
+        <p class="statements">Nutritionist • Public Health Advocate</p>
+        <a target='_blank' href="https://linkedin.com/in/marianaamendez/"> <i class="fab fa-linkedin-in fa-1x fa-fw"></i></a>
+        <a href="mailto:marianaa.mendez4@gmail.com"> <i class="far fa-envelope fa-1x fa-fw"></i></a>
+      </div>
+    </div>
+    <hr/>
+    </header>
+
+<main>{% block page %}{% endblock %}</main>
+    </div>
+
+    <!-- Page Footer -->
+    <footer class="page-footer" id = "myFooter">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h6 class="white-text">Connect With Me!</h6>
+            <a target='_blank' href="https://linkedin.com/in/marianaamendez/"> <i class="fab fa-linkedin-in fa-1x fa-fw"></i></a>
+            <a href="mailto:marianaa.mendez4@gmail.com"> <i class="far fa-envelope fa-1x fa-fw"></i></a>
+          </div>
+
+          <div class="col l4 offset-l2 s12">
+            <h6 class="white-text">Site Map</h6>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="{% url 'home' %}">Home</a></li>
+              <li><a class="grey-text text-lighten-3" href="{% url 'home' %}">About Me</a></li>
+              <li><a class="grey-text text-lighten-3" href="{% url 'blog' %}">Food Blog</a></li>
+              <li><a target="_blank" class="grey-text text-lighten-3" href="https://s3-us-west-1.amazonaws.com/marianamendezsite/mariana_resume.pdf">Resume</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        <p class="text-left text-uppercase"> Updated 05.01.2019
+        <a class="white-text text-lighten-1 right" href="#backtotop">Back to Top</a></p>
+        </div>
+      </div>
+    </footer>
+    <!-- Page Footer -->
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127467378-1"></script> -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127467378-1');
+    </script>
+    <!-- auto initialize javascript functions -->
+    <script>M.AutoInit();</script>
+    <script>
+      $(document).ready(function() {
+      $('select').material_select();
+      });
+    </script>
+
+</body>
+
+<!--JavaScript at end of body for optimized loading-->
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
+</html>

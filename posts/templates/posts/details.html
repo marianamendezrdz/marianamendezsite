@@ -1,0 +1,26 @@
+{% extends 'posts/base.html' %}
+
+{% block title %}
+Mariana Mendez | Food Blog
+{% endblock %}
+
+{% block page %}
+<!-- /* adding link previews in messages */ -->
+<meta property="og:title" content="Mariana Mendez's Home Page" />
+<meta property="og:url" content="http://marianamendez.me/blog" />
+<meta property="og:image" content="https://s3-us-west-1.amazonaws.com/marianamendezsite/home_page_pic.jpg"/>
+<meta property="og:type" content="website" />
+
+<h3 class="center"> {{post.title}}</h3>
+
+<div class="card">
+  <div class='card-content'>
+    {{post.body}}
+  </div>
+  <div class='card-action'>
+    {{post.created_at}}
+  </div>
+</div>
+<a href='/posts' class='btn'>Go Back</a>
+
+{% endblock %}
